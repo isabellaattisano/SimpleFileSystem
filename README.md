@@ -6,8 +6,4 @@ A file system is a data structure used by the operating system to store, retriev
 
 ## *Project Overview*
 
-In this project I endeavored to implement a very simple file system using C. 
-
-
-## *Disk Emulator*
-## *File System Implementation*
+In this project I endeavored to implement a very simple file system using C. It seeks to highlight the primary data structures and access structures used by the file system. My file system is a disk-based file system and uses a disk image file to simulate how the file system would interact with true hardware.  
