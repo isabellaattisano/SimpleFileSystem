@@ -10,4 +10,4 @@ In this project I endeavored to implement a very simple file system using C. It 
 
 ## *Additional Project Details*
 
-Additional project details can be found at : [Project Details](https://isabellaattisano.github.io/bella-attisano)
+Additional project details can be found at : [Project Details](https://isabellaattisano.github.io/bella-attisano/projects/fs/fs.html)
