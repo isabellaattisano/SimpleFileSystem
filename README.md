@@ -2,7 +2,7 @@
 
 ## *Additional Project Details*
 
-Additional project details can be found at : [Project Details](https://isabellaattisano.github.io/bella-attisano/projects/fs/fs.html)
+Additional project details can be found on my website : [Project Details](https://isabellaattisano.github.io/bella-attisano/projects/fs/fs.html)
 
 ## *What is a File System?*
 
