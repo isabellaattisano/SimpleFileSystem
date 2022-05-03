@@ -80,10 +80,7 @@ void do_format(Disk *disk, FileSystem *fs, int args, char *arg){
 void do_mount(Disk *disk, FileSystem *fs, int args, char *arg){
 
     if (fs_mount(fs, disk)) {
-        printf("Disk mounted:\n");
-        printf("%u\n", fs->meta_data.blocks);
-        printf("%u\n", fs->meta_data.inode_blocks);
-        printf("%u\n", fs->meta_data.inodes);
+        printf("Disk mounted\n");
     } else {
         printf("Mount failed!\n");
     }
@@ -100,7 +97,7 @@ void do_create(Disk *disk, FileSystem *fs, int args, char *arg){
     ssize_t inode_number = fs_create(fs, str);
     
     if(inode_number>-1){
-        printf("created inode %ld\n", inode_number);
+        printf("created %s with inode number %ld\n", str, inode_number);
     }
     else{
         printf("Could not create file: %s\n", arg);

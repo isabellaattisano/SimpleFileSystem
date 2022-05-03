@@ -195,7 +195,7 @@ ssize_t fs_create(FileSystem *fs, char *name) {
                     b.inodes[j].direct[k] = 0;
 
                 disk_write(fs->disk, i, b.data); //write the updated information about the inode
-                printf("creating: %d with name %s %ld\n", (INODES_PER_BLOCK*(i-1) + j), name, b.inodes[j].size); //for debugging prints out return val
+                // printf("creating: %d with name %s %ld\n", (INODES_PER_BLOCK*(i-1) + j), name, b.inodes[j].size); //for debugging prints out return val
 
                 return (INODES_PER_BLOCK*(i-1) + j); //returns inode location in the table not just individual block
             }
@@ -221,8 +221,8 @@ bool fs_remove(FileSystem *fs, char *name) {
 
     if(load_inode(fs, name, &inode_number, &inode)){
         //update information
-        check_pass(inode.pass, 0); //checks user pass before allowing access
-        printf("removing %s with number %lu\n", inode.name, inode_number);
+        check_pass(inode.pass, 3); //checks user pass before allowing access
+        // printf("removing %s with number %lu\n", inode.name, inode_number);
         inode.valid = false; 
         inode.size = 0;
 

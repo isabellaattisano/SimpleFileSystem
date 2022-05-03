@@ -27,8 +27,8 @@ char* create_pass(){
 		printf("The password entered does not meet the required length");
 		while(strlen(pass)<=5){ //loops until password meets requirements
 			//printf("%s and %ld", pass, strlen(pass));
-			printf("Enter password that meets the requirement: ");
-			fgets(pass_hold, 50, stdin);
+			printf("\nEnter password that meets the requirement: ");
+			fgets(pass, 50, stdin);
 		}
 	}
 
@@ -38,7 +38,7 @@ char* create_pass(){
 	if(strcmp(pass, pass_hold)!=0){ //checks if passwords are equivalent
 		while(strcmp(pass, pass_hold) != 0){ //loops until password is the same as first entered
 			printf("the passwords do not match, try again: ");
-			scanf("%s", pass_hold);
+			fgets(pass_hold, 50, stdin);
 		}
 	}
 	char* dyn_hold = (char*)malloc(50); //creates a string stored in dynamic memory
@@ -52,8 +52,11 @@ void check_pass(char pass[], int num){
 	if(num == 0){ //read file
 		printf("Must Enter Password to Read File: ");
 	}
-	else{ //num is 1, write to file
+	else if(num==1){ //num is 1, write to file
 		printf("Must Enter Password to Write to File: ");
+	}
+	else{
+		printf("Must Enter Password to Remove File: ");
 	}
 
     fgets(pass_hold, 50, stdin);
